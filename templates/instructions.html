@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link href="{{ url_for('static',filename='css/instructions.css') }}" rel="stylesheet" />
+   
+    <title>ProFit Virtual Trainer</title>
+  </head>
+
+
+<body data-spy="scroll" data-target=".fixed-top" style="overflow-x: hidden;" >
+<div >
+
+
+<img src="{{ url_for('static',filename='images/back.jpg') }}" style="width:100vw;height:117vh;position:absolute;">
+<div style="position: absolute;top: 0;width: 100vw;height: 100vh;">
+
+
+<div>
+<a href="https://profit-31897.web.app/">
+<img src="{{ url_for('static',filename='images/logo.png') }}" style="width:10em;height:10em;position:absolute;top:2%;left:4%">
+</a>
+<h1 style="color:#F92778;position:absolute;top:23vh;left:7vw;font-size:2rem;;">Instructions for Trainer</h1>
+<h3 style="position:absolute;right: 5%;top:5vh ;">{{excersise}}</h3>
+
+</div>
+
+<div style="position: absolute;top: 35%;left: 20vw;right: 20vw;">
+<img src="{{inst_img}}" style="width:23vw;height:25vh;margin-left:20%;margin-bottom:2%;margin-top:-4vh;">
+<ul style="list-style-type:circle ;z-index: 200; font-size: 0.8em;">
+<li>{{i1}}</li>
+<li>{{i2}}</li>
+
+</ul>
+<form method="POST">
+<button  id="submitbtn" type="submit">Lets GO!</button>
+</form>
+</div>
+
+
+
+</div>
+
+
+</div>
+
+</body>
+</html>

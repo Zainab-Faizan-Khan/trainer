@@ -1,0 +1,70 @@
+*{margin: 0;
+padding: 0;
+
+
+}
+
+#submitbtn{
+display: block;
+margin-left: 35%;
+	border: 0.3rem solid #F92778;
+	border-radius: 1.5rem;
+	background-color: transparent;
+	width: 30vw;
+	height: 5.5vh;
+	color: #F92778;
+	font-size: 1em;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+	cursor: pointer;
+	transition: all 0.2s;
+margin-top: 2%;
+
+}
+
+#submitbtn:hover{
+	border: 0.3rem solid #F92778;
+	background:linear-gradient(#F92778,#F92778,white);
+	color: white;
+font-size: 1.5em;
+}
+
+.message{
+background-color: #ecc8d6;
+color: red;
+font-size: 0.5em;
+position: absolute;
+top: 2%;
+
+border: 1px solid red;
+
+text-align: center;
+padding: 2vh 0.5vw;
+}
+
+.detail{
+margin-top: 2%;
+display: flex;
+flex-direction: row;
+text-align: center;
+width: 100%;
+font-size: 1.2em;
+justify-content: center;
+color: #b81d58;
+margin-right: 4%;
+
+}
+
+#detailbox{
+margin-top: 25vh;
+width: 100%;
+text-align: center;
+}
+
+#failure{
+display: none;
+}
+
+#success{
+display: none;
+}

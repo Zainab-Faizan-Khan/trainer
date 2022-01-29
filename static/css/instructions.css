@@ -1,0 +1,29 @@
+*{margin: 0;
+padding: 0;
+
+
+}
+
+#submitbtn{
+display: block;
+margin-left: 25%;
+	border: 0.3rem solid #F92778;
+	border-radius: 1.5rem;
+	background-color: transparent;
+	width: 30vw;
+	height: 5.5vh;
+	color: #F92778;
+	font-size: 1em;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+	cursor: pointer;
+	transition: all 0.2s;
+margin-top: 10%;
+}
+
+#submitbtn:hover{
+	border: 0.3rem solid #F92778;
+	background:linear-gradient(#F92778,#F92778,white);
+	color: white;
+font-size: 1.5em;
+}

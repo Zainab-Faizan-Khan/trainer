@@ -1,0 +1,90 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Pose Estimation</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="{{ url_for('static',filename='css/trainer.css') }}" rel="stylesheet" />
+</head>
+
+      
+
+<body>
+<!-- As a link -->
+
+<h3 style="position: absolute;z-index: 2000;width: 100%;top: 3%;text-align: center; color: #F92778;font-size: 1.3em;">{{arm}}</h3>
+<form method="POST" id="start">
+
+</form>
+<button id="submitbtn" onclick="start()">{{signal}}</button>
+<h3 id="one" class="counter">1</h3>
+<h3 id="two" class="counter">2</h3>
+<h3 id="three" class="counter">3</h3>
+<h3 id="four" class="counter">4</h3>
+<h3 id="five" class="counter">5</h3>
+
+<div id="score-area">
+<h6>Reps</h6>
+<h6>{{c}}</h6>
+</div>
+<form id='armselect' method="post">
+<button id="leftbtn" onclick='left()'>Left</button>
+<button id="rightbtn" onclick='right()'>Right</button>
+</form>
+<h1 style="font-size: 0.7em;position: fixed;z-index: 3000;width:100%;text-align:center;bottom:2%;">Virtual Trainer @ ProFit</h1>
+
+
+
+
+
+ <div class="mx-auto">
+  <img id="display" style="width:100vw;height:100vh;" src="{{ url_for('video_feed') }}">
+</div>
+
+</body>
+<script>
+function left(){
+    document.getElementById('armselect').action="left"
+    document.getElementById('armselect').submit()
+}
+function right(){
+    document.getElementById('armselect').action="right"
+    document.getElementById('armselect').submit()
+}
+
+function start(){
+
+
+let time2;let time3;let time4;let time5;let time6;
+document.getElementById('one').style.display="flex"
+
+time2=setTimeout(dp2,1000)
+time3=setTimeout(dp3,2000)
+time4=setTimeout(dp4,3000)
+time5=setTimeout(dp5,4000)
+time6=setTimeout(dp6,5000)
+
+}
+
+function dp2(){
+    document.getElementById('two').style.display="flex"
+    document.getElementById('one').style.display="none"
+}
+function dp3(){
+    document.getElementById('two').style.display="none"
+    document.getElementById('three').style.display="flex"
+}
+function dp4(){
+    document.getElementById('three').style.display="none"
+    document.getElementById('four').style.display="flex"
+}
+function dp5(){
+    document.getElementById('four').style.display="none"
+    document.getElementById('five').style.display="flex"
+}
+function dp6(){
+document.getElementById('five').style.display="none"
+document.getElementById('start').action="bicep"
+document.getElementById('start').submit()
+}
+</script>
+</html>

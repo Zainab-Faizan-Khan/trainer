@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link href="{{ url_for('static',filename='css/welcome.css') }}" rel="stylesheet" />
+   
+    <title>ProFit Virtual Trainer</title>
+  </head>
+
+
+
+  <body data-spy="scroll" data-target=".fixed-top" style="overflow-x: hidden;overflow-y: hidden;" >
+<div class="container" style="text-align:center;justify-content:center;width: 100%;" >
+<a href="https://profit-31897.web.app/" style="z-index: 1000;width:10em;height:10em;position:absolute;top:2%;left:4%"></a>
+<img src="{{ url_for('static',filename='images/logo.png') }}" style="width:10em;height:10em;position:absolute;top:2%;left:4%">
+
+<img src="{{ url_for('static',filename='images/main.jpeg') }}" style="width:100vw;height:100vh;">
+
+<h3 style="color: red;z-index:2000;position: absolute;top: 48%;width: 100%;text-align: center;" id="invalid">{{message}}</h3>
+<h1 style="color:#F92778;position:absolute;top:23vh;width:100vw;font-size:2.5rem;">Welcome to the virtual trainer by ProFit</h1>
+
+</div>
+
+<div style="position: absolute; top: 55%;left: 0%; justify-items: center;align-content: center;text-align: center;width: 100vw;height: 20vh;justify-content: center; z-index: 100000;">
+
+<form method="post">
+
+
+
+<input type="email"  id="email" name="email" placeholder="Enter your email" class="inputfield" value="{{request.form['email']}}" >
+
+<input  id="code" name="code" placeholder="Enter code" class="inputfield" >
+
+<button type="submit" id="submitbtn">Submit</button>
+
+</form>
+
+
+</div>
+
+
+
+<div style="background-color:rgba(0, 0, 0,0.2);width:100vw;height:100vh;position:absolute;top:0;left:0" ></div>
+
+
+
+  </body>
+
+
+</html>

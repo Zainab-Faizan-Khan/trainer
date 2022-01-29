@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link href="{{ url_for('static',filename='css/progress.css') }}" rel="stylesheet" />
+   
+    <title>ProFit Virtual Trainer</title>
+  </head>
+<body data-spy="scroll" data-target=".fixed-top" style="overflow-x: hidden;overflow-y: hidden;" >
+
+<a href="https://profit-31897.web.app/">
+<img src="{{ url_for('static',filename='images/logo.png') }}" style="width:10em;height:10em;position:absolute;top:2%;left:4%">
+</a>
+
+<div id="detailbox" >
+<h1 style="font-size: 3em;color: #F92778;">Good Job {{n}}</h1>
+<h3 style="font-size:2em;margin-top: 2%;margin-bottom: 7%;">Progress</h3>
+
+<div class="detail">
+<h4>Excersise : </h4><h4>{{e}}</h4>
+</div>
+
+
+<div class="detail">
+<h4>Reps :</h4><h4>{{r}}</h4>
+</div>
+<div class="detail">
+<h4>{{m}}</h4>
+</div>
+
+</div>
+<form id='save' method="post">
+<button  id="submitbtn" onclick='save()'>Save Progress</button>
+</form>
+<form id='home' method="post">
+<button  id="submitbtn" onclick='home()'>Back to home</button>
+</form>
+
+<img src="{{ url_for('static',filename='images/back.jpg') }}" style="width:100vw;height:100vh;position:absolute;top: 0;left: 0;z-index: -100;">
+<div style="width: 100%;justify-content:space-around;display:flex;">
+<div class="message" id="success">
+<h1>Your Progress has been saved!</h1>
+</div>
+
+<div class="message" id="failure">
+<h1>Some Problem occured. Cant save progress</h1>
+</div>
+</div>
+</body>
+<script>
+function save(){
+    document.getElementById('save').action="save"
+    document.getElementById('save').submit()
+}
+function home(){
+    document.getElementById('home').action="home"
+    document.getElementById('home').submit()
+}
+</script>
+</html>
